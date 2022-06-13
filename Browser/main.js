@@ -19,12 +19,15 @@ function calculate(){
 }
 
 
+
 swap.addEventListener('click',()=>{
 	const temp = curr1El.value;
 	curr1El.value = curr2El.value;
 	curr2El.value = temp;
+	calculate();
 });
 curr1El.addEventListener("change",calculate);
 curr2El.addEventListener("change",calculate);
 amount1El.addEventListener("input", calculate);
 amount2El.addEventListener("input", calculate);
+document.addEventListener('DOMContentLoaded', calculate);

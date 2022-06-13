@@ -1,6 +1,15 @@
 @import "https://unpkg.com/open-props";
 
+@media (max-width: 600px) {
+  .currency select {
+  	content: "";
+  }
 
+  .container {
+  	height: 100%;
+  	width: 80vw;
+  }
+}
 
 *, *::before, *::after {
 	box-sizing: border-box;
