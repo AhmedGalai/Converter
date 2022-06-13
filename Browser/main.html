@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+	<div class ="header"><img src =""><h2>Enter the Currency you want to convert and the amount of mony to be calculated</h2></div>
+	<div class = "currency">
+		<select id ="currency-1">
+			<option value ="USD" selected>USD</option>
+			<option value ="EUR">EUR</option>
+			<option value ="TND">TND</option>
+		</select>
+		<input type="number" id="amount-1"></input>
+	</div>
+	<button id = "swap">Swap</button>
+	<h2 id ="rate">1</h2>
+	<div class = "currency">
+		<select id="currency-2">
+			<option value ="USD">USD</option>
+			<option value ="EUR" selected>EUR</option>
+			<option value ="TND">TND</option>
+		</select>
+		<input type="number" id="amount-2"></input>
+	</div>
+	<script src="main.js"></script>
+  </body>
+</html>
