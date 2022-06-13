@@ -1,3 +1,7 @@
+@import "https://unpkg.com/open-props";
+
+
+
 *, *::before, *::after {
 	box-sizing: border-box;
 	inset: 0;
@@ -10,9 +14,9 @@
 
 html {
 	font-family: sans-serif;
-	font-size: 1rem;
+	font-size: var(--size-4);
 	height: 100vh;
-	background: #333;
+	background: var(--gray-9);
 }
 
 body {
@@ -23,21 +27,66 @@ body {
 	align-items: center;
 }
 
+.container {
+	width: clamp(40rem, 2vw, 80vw);
+	padding: 1em;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: 80vh;
+	box-shadow: var(--shadow-4);
+}
+
 .currency {
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
 }
 
+.currency select {
+	font-size: var(--size-4);
+}
+
 .currency input{
-	border-radius: 0.1em;
+	border-radius: 0.5em;
 	padding: 0.2em;
-	color: black;
+	color: var(--gray-8);
+	font-size: var(--size-4);
+	text-align: center;
+}
+
+#middle-section{
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
 }
 
 .header h2 {
-	color: white;
+	color: var(--gray-0);
+	text-align: center;
 }
 #rate{
-	color: white;
+	color: var(--gray-0);
+}
+
+#swap {
+	transform: scale(1.0);
+	font-size: var(--size-3);
+	padding: 0.4em;
+	border-radius: 40%;
+
+}
+
+#swap:hover, #swap:focus{
+	animation: wobble 0.5s alternate;
+}
+
+@keyframes wobble {
+	0% : {
+		transform: scale(1.0);
+	}
+	100% : {
+		transform: scale(1.2);
+	}
 }
